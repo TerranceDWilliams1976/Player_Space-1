@@ -24,29 +24,24 @@ public class GarageApplication {
 			// connect to the "chinook.db" database
 			// the last two empty strings in the method are for username and password, which
 			// aren't necessary here
-			con = DriverManager.getConnection("jdbc:sqlite:./chinook.db", "", "");
+			con = DriverManager.getConnection("jdbc:myql:test.cyjqic58ue0v.us-east-2.rds.amazonaws.com:3306", "", "");
 
 			// prepare a Statement object for SQL queries
 			Statement stmt = con.createStatement();
 
 			// get all columns from the table "Album"
-			ResultSet rs = stmt.executeQuery("SELECT * FROM Albums");
+			ResultSet rs = stmt.executeQuery("SELECT * FROM Test");
 
 			// variables for each column in the database
-			int albumId;
-			String albumTitle;
-			int albumArtistId;
+			String FirstName;
 
 			// access each row in the table
 			while (rs.next()) {
 				// get the values from each column of the current row
-				albumId = rs.getInt("AlbumId");
-				albumTitle = rs.getString("Title");
-				albumArtistId = rs.getInt("ArtistId");
+				FirstName = rs.getString("FirstName");
 
 				// print the values of the row
-				System.out.println(
-						"Album ID: '" + albumId + "', Title: '" + albumTitle + "', Artist: '" + albumArtistId + "'.");
+				System.out.println("FirstName: '" + FirstName);
 			}
 		} catch (SQLException e) {
 			// print the stack trace of the error
