@@ -1,4 +1,4 @@
-package com.garagee;
+package com.garage;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
