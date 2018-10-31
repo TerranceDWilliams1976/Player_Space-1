@@ -12,7 +12,7 @@ public class Message {
     @Id
     @GeneratedValue
     private Integer id;
-    private String FirstName;
+    private String first_name;
 
     public Integer getId() {
         return id;
@@ -23,10 +23,10 @@ public class Message {
     }
 
     public String getName() {
-        return FirstName;
+        return first_name;
     }
 
-    public void setName(String FirstName) {
-        this.FirstName = FirstName;
+    public void setName(String first_name) {
+        this.first_name = first_name;
     }
 }
