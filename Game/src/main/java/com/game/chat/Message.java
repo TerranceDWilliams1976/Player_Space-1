@@ -1,32 +1,34 @@
 package com.game.chat;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Entity;
 
 @Entity
-@Table(name="Test")
+@Table(name = "game_library")
 public class Message {
 
     @Id
     @GeneratedValue
-    private Integer id;
-    private String first_name;
+    private Integer game_id;
+    private String game;
 
-    public Integer getId() {
-        return id;
+    // Game ID
+    public Integer getGame_Id() {
+        return game_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setGame_Id(Integer game_id) {
+        this.game_id = game_id;
     }
 
-    public String getName() {
-        return first_name;
+    // Game Name
+    public String getGame() {
+        return game;
     }
 
-    public void setName(String first_name) {
-        this.first_name = first_name;
+    public void setGame(String game) {
+        this.game = game;
     }
 }
