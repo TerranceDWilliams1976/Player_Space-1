@@ -1,4 +1,4 @@
-package com.garage.info;
+package com.garage.lib;
 
 import java.util.List;
 
@@ -10,25 +10,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class InfoController {
+public class LibController {
 
     @Autowired
-    InfoRepo dao;
+    LibRepo dao;
     
-    @GetMapping("/info")
-    public List<Info> getInfo(){
-        List<Info> foundInfo = dao.findAll();
-        return foundInfo;
+    @GetMapping("/search")
+    public List<Lib> getLib(){
+        List<Lib> foundLib = dao.findAll();
+        return foundLib;
     }
     
-    @PostMapping("/info")
-    public ResponseEntity<Info> postInfo(@RequestBody Info info){
+    @PostMapping("/search")
+    public ResponseEntity<Lib> postLib(@RequestBody Lib lib){
 
         // Saving to DB using an instance of the repo Interface.
-        Info createdInfo = dao.save(info);
+        Lib createdLib = dao.save(lib);
 
         // RespEntity crafts response to include correct status codes.
-        return ResponseEntity.ok(createdInfo);
+        return ResponseEntity.ok(createdLib);
     }
 
 }

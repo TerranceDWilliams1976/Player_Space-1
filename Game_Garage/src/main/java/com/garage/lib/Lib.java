@@ -1,4 +1,4 @@
-package com.garage.info;
+package com.garage.lib;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -6,9 +6,9 @@ import javax.persistence.Table;
 import javax.persistence.Entity;
 
 @Entity
-@Table(name = "games_i_want")
+@Table(name = "game_library")
 //@Table(name = "game_library")
-public class Info {
+public class Lib {
 
     @Id
     @GeneratedValue
