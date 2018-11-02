@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LibController {
+public class HadController {
 
     @Autowired
-    LibRepo dao;
+    HadRepo dao;
     
-    @GetMapping("/search")
-    public List<Lib> getLib(){
-        List<Lib> foundLib = dao.findAll();
-        return foundLib;
+    @GetMapping("/had")
+    public List<Had> getHad(){
+        List<Had> foundHad = dao.findAll();
+        return foundHad;
     }
     
-    @PostMapping("/search")
-    public ResponseEntity<Lib> postLib(@RequestBody Lib lib){
+    @PostMapping("/had")
+    public ResponseEntity<Had> postHad(@RequestBody Had had){
 
         // Saving to DB using an instance of the repo Interface.
-        Lib createdLib = dao.save(lib);
+        Had createdHad = dao.save(had);
 
         // RespEntity crafts response to include correct status codes.
-        return ResponseEntity.ok(createdLib);
+        return ResponseEntity.ok(createdHad);
     }
 }
