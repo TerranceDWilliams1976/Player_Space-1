@@ -1,5 +1,6 @@
 package com.garage.controllers;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class LibController {
     @Autowired
     com.garage.repo.LibRepo dao;
     
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/search")
     public List<com.garage.models.Lib> getLib(){
         List<com.garage.models.Lib> foundLib = dao.findAll();

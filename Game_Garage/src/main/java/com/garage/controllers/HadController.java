@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ public class HadController {
     @Autowired
     com.garage.repo.HadRepo dao;
     
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/had")
     public List<com.garage.models.Had> getHad(){
         List<com.garage.models.Had> foundHad = dao.findAll();
