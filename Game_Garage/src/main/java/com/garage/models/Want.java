@@ -3,6 +3,7 @@ package com.garage.models;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
@@ -11,17 +12,17 @@ import javax.persistence.Entity;
 public class Want {
 
     @Id
-    @GeneratedValue
-    private Integer game_id;
+    @Column(name="game_id")
+    private Integer gameId;
     private String game;
 
     // Game ID
     public Integer getGame_Id() {
-        return game_id;
+        return gameId;
     }
 
     public void setGame_Id(Integer game_id) {
-        this.game_id = game_id;
+        this.gameId = game_id;
     }
 
     // Game Name
