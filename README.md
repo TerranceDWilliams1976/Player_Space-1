@@ -7,21 +7,6 @@ by [@tomastrajan](https://twitter.com/tomastrajan)
 ![intro](https://raw.githubusercontent.com/tomastrajan/angular-ngrx-material-starter/master/meta-assets/intro.png)
 ![themes](https://raw.githubusercontent.com/tomastrajan/angular-ngrx-material-starter/master/meta-assets/themes.png)
 
-## Table of Content
-
-  * [Live Demo](https://tomastrajan.github.io/angular-ngrx-material-starter)
-  * [Getting Started](#getting-started)
-  * [Useful Commands](#useful-commands)
-  * [Make It Your Own](#make-it-your-own)
-  * [Goals](#goals)
-  * [Learning Materials](#learning-materials)
-  * [List of Projects Built Using This Starter](https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/BUILT_WITH.md)
-  * [Features](#features)
-  * [Stack](#stack)
-  * [Code of Conduct](https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/CODE_OF_CONDUCT.md)
-  * [Contributors Guide](https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/CONTRIBUTING.md)
-  * [Changelog](https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/CHANGELOG.md) ( get notified about the newest releases, [follow Release Butler](https://twitter.com/) on Twitter )
-
 
 ## Getting started
 ```bash
