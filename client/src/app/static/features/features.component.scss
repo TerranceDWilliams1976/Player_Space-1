@@ -1,0 +1,124 @@
+@import '../../../styles-variables';
+
+.container {
+  margin-top: 20px;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+mat-card {
+  margin: 0 0 20px 0;
+
+  mat-card-title {
+    position: relative;
+
+    code {
+      position: absolute;
+      top: 11px;
+      right: 0;
+      float: right;
+      font-size: 10px;
+    }
+  }
+  mat-card-subtitle {
+    min-height: 60px;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    mat-card-subtitle {
+      min-height: auto;
+    }
+  }
+
+  a {
+    fa-icon {
+      position: relative;
+      bottom: 2px;
+      font-size: 16px;
+      margin: 6px;
+    }
+  }
+
+  a[mat-icon-button] {
+    position: relative;
+    left: 5px;
+  }
+}
+.left {
+  float: left;
+  margin-left: 25px;
+}
+.right {
+  float: right;
+}
+.settings {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 136px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+.account {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 97px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+
+}
+.garage {
+  background: red;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 150px;
+  margin-right: 10px;
+}
+
+.home {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 190px;
+  margin-right: 0;
+  margin-top: 0;
+}
+.profile {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 183px;
+  margin-right: 0;
+}
+.search {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 0;
+}
+.image {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+.want {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 180px;
+}
+.have {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 180px;
+}
+
+.center {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 15%;
+  left: 36%;
+}
+.want, .have {
+  margin-left: auto;
+  margin-right: auto;
+}
