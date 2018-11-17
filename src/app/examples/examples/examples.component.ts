@@ -27,14 +27,14 @@ export class ExamplesComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject<void>();
   private isAuthenticated$: Observable<boolean>;
 
-  examples = [
-    { link: 'todos', label: 'anms.examples.menu.todos' },
-    { link: 'stock-market', label: 'anms.examples.menu.stocks' },
-    { link: 'theming', label: 'anms.examples.menu.theming' },
-    { link: 'crud', label: 'anms.examples.menu.crud' },
-    { link: 'form', label: 'anms.examples.menu.form' },
-    { link: 'authenticated', label: 'anms.examples.menu.auth', auth: true }
-  ];
+  // examples = [
+  //   { link: 'todos', label: 'anms.examples.menu.todos' },
+  //   { link: 'stock-market', label: 'anms.examples.menu.stocks' },
+  //   { link: 'theming', label: 'anms.examples.menu.theming' },
+  //   { link: 'crud', label: 'anms.examples.menu.crud' },
+  //   { link: 'form', label: 'anms.examples.menu.form' },
+  //   { link: 'authenticated', label: 'anms.examples.menu.auth', auth: true }
+  // ];
 
   constructor(
     private store: Store<State>,
