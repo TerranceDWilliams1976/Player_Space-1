@@ -30,12 +30,12 @@
         <span routerLink="" class="branding spacer d-none d-md-inline"> {{ 'anms.title' | translate
           }}</span>
 
-        <span class="d-none d-md-inline">
+        <!-- <span class="d-none d-md-inline">
           <button mat-button class="nav-button" *ngFor="let item of navigation" [routerLink]="[item.link]"
             routerLinkActive="active">
             {{item.label | translate}}
           </button>
-        </span>
+        </span> -->
 
         <button mat-button mat-stroked-button color="accent" *ngIf="!isAuthenticated" (click)="onLoginClick()">
           {{ 'anms.menu.login' | translate }}
