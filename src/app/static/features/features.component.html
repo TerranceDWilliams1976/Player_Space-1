@@ -1,30 +1,18 @@
 
   
-<!-- <div class="left">
-  <img src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" alt="" height="150px" width="150px" class="image"><br>
-  <button class="settings"><h2>Settings</h2></button><br>
-  <button class="account"><h2>My Account</h2></button><br>
-  <button class="garage"><h2>Garage</h2></button>
-</div>
-<div class="center">
-  <button class="want"><h2>I Want</h2></button><button class="have"><h2>I Have</h2></button>
-</div>
-<div class="right">
-  <button class="home"><h2>Home</h2></button><br>
-  <button class="profile"><h2>Profile</h2></button><br>
-  <a href="/#/examples/todos"><button class="search"><h2><a>Search For A Game</a></h2></button></a>
-  
-</div> -->
-
 <div class="background">
   <div class="gradient">
     <div class="container">
       <h1>{{ 'anms.title' | translate }}</h1>
       <div class="actions">
-        <a [ngClass]="routeAnimationsElements" mat-raised-button class="actions-main" color="warn" routerLink="../todos">
+        <form>
+          <label for="search">
+        <a [ngClass]="routeAnimationsElements" mat-raised-button class="actions-main" color="warn" routerLink="../examples" id="search">
           {{ 'anms.menu.feature' | translate }}
         </a>
-        <input type="text" />
+        <input type="search" ng-model="name" id="search">
+        </label>
+        </form>
         <!-- <a mat-raised-button class="actions-main" color="accent" routerLink="../examples" [ngClass]="routeAnimationsElements">
           {{ 'anms.menu.examples' | translate }}
         </a> -->
@@ -245,7 +233,16 @@
     <span>Vishal Sodani</span>
   </a>
 ALL-CONTRIBUTORS-LIST:END -->
-
+  <script>
+    .controller('mycontroller', ['$scope',function($scope) {
+    $scope.name = '';
+    $scope.email = '';
+    // Function to be called when pressing ENTER
+    $scope.myFunc = function() {
+       alert('Submitted');
+    };
+}])
+  </script>
     </div>
   </div>
 </div>
