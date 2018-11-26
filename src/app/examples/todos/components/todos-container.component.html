@@ -1,3 +1,12 @@
+
+<div class="right">
+    <!-- <button class="home"><h2>Home</h2></button><br>
+    <button class="profile"><h2>Profile</h2></button><br> -->
+    <a href="/#/features"><button class="search"><h2><a>View Library</a></h2></button></a>
+    <!-- <a href="/#/"><button class="search"><h2><a>Search For A Game</a></h2></button></a> -->
+    
+  </div>
+
 <!-- <div class="container">
   <div class="row">
     <div class="offset-md-2 col-md-8 entry">
@@ -169,12 +178,19 @@
 <div class="background">
   <div class="gradient">
     <div class="container">
-      <h1>{{ 'Search For A Game' | translate }}</h1>
+      <h1>{{ 'Results' | translate }}</h1>
       <div class="actions">
-        <a [ngClass]="routeAnimationsElements" mat-raised-button class="actions-main" color="warn" routerLink="" class="button">
+        <!-- <a [ngClass]="routeAnimationsElements" mat-raised-button class="actions-main" color="warn" routerLink="../features" class="button">
           {{ 'Search' | translate }}
-          </a>
-        
+          </a> -->
+<button class="btn-search" type="button" (click)="this.getSearch()">Search!</button>
+
+<ul *ngFor = "let data of apiSearch">
+    <li>{{data.game}} </li>
+    <button class="btn-search2" type="button" (click)="this.postWant(data)">Add to I Want!</button>
+    <button class="btn-search2" type="button" (click)="this.postHave(data)">Add to I Have!</button>
+    <button class="btn-search2" type="button" (click)="this.postHad(data)">Add to I Had!</button>
+</ul>
       </div>  
     </div>
   </div>
@@ -207,6 +223,7 @@
     </p> -->
 
     <div class="contributors-wrapper">
+
 
       <!-- ALL-CONTRIBUTORS-LIST:START -->
   <!-- <a class="contributor" href="https://medium.com/@tomastrajan" target="_blank">
@@ -362,4 +379,5 @@ ALL-CONTRIBUTORS-LIST:END -->
     </div>
   </div>
 </div>
+
 

@@ -4,6 +4,8 @@ import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
 
 import { features } from './features.data';
 
+// import { WantComponent } from '../want/want.component';
+
 @Component({
   selector: 'anms-features',
   templateUrl: './features.component.html',

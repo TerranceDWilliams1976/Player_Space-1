@@ -167,10 +167,10 @@ mat-card {
   margin: 0 0 0 0;
   border: none;
   border-radius: 10px; 
-  background-color: #ffae00;
+  background-color: #000000;
   color: #ffffff;
 }
-.had:hover, .had:focus{
+.had:hover{
   background-color: #000000;
 }
 
@@ -180,7 +180,43 @@ mat-card {
   position: absolute;
   top: 15%;
   left: 36%;
+  // margin: 0 auto 0 0;
 }
+
+.test {
+  // text-align: center;
+  // text-align: center;
+  // display: block;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  margin: 160px 0px 0px 290px;
+}
+
+.btn-search{
+  border: none;
+  border-radius: 10px;
+  background-color: #ffae00;
+  color: #ffffff;
+}
+
+.del{
+  background-color: #8f0606;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.del:hover{
+  background-color: #000000;
+}
+
+.btn-search:hover{
+  background-color: #000000;
+}
+
 .want, .have, .had {
   margin: 10px;
   margin: 10px;

@@ -25,7 +25,7 @@
 
         <span routerLink="" class="branding spacer center d-inline d-sm-none">
           <img [src]="logo" /></span>
-        <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none"><img [src]="logo" /> {{
+        <span routerLink="" class="branding spacer center d-none d-sm-inline d-md-none"><!--<img [src]="logo" />--> {{
           'anms.title.short' | translate }}</span>
         <span routerLink="" class="branding spacer d-none d-md-inline"> {{ 'anms.title' | translate
           }}</span>
@@ -57,14 +57,14 @@
           <fa-icon icon="cog"></fa-icon>
         </button>
 
-        <a [matTooltip]="'anms.header.github' | translate"
+        <!-- <a [matTooltip]="'anms.header.github' | translate"
            matTooltipPosition="before"
            mat-icon-button
            class="link d-none d-sm-inline"
            href="#"
            target="_blank">
           <fa-icon [icon]="['fab','github']"></fa-icon>
-        </a>
+        </a> -->
 
         <!-- <span>
           <mat-select [ngModel]="settings?.language" (selectionChange)="onLanguageSelect($event)">
@@ -83,7 +83,7 @@
     <div class="footer">
       <div class="row">
         <div class="col-sm-12 links">
-          <a href="#" target="_blank">
+          <!-- <a href="#" target="_blank">
             <fa-icon [icon]="['fab','github']"></fa-icon>
             <span>Github</span>
           </a>
@@ -107,19 +107,19 @@
           <a href="#">
             <fa-icon icon="play-circle"></fa-icon>
             <span>Slides</span>
-          </a>
+          </a> -->
         </div>
       </div>
       <div class="row">
         <div class="col-12 signature">
           &#169; <span class="year" data-testid="footer-year">{{year}}</span> - Team One
           <br class="d-block d-sm-none">
-          <a [matTooltip]="'anms.footer.changelog' | translate"
+          <!-- <a [matTooltip]="'anms.footer.changelog' | translate"
              matTooltipPosition="before"
              href="#">
             <fa-icon icon="rocket"></fa-icon>
             {{version}} <span *ngIf="!isProd">[{{envName}}]</span>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>

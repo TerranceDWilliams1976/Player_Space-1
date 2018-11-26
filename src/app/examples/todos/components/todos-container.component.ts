@@ -24,6 +24,66 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./todos-container.component.scss']
 })
 export class TodosContainerComponent implements OnInit, OnDestroy {
+  apiHave;
+  apiHad;
+  apiWant;
+  apiSearch;
+
+  //Get-------------------------------------------------
+  getSearch() {
+      const url = 'http://localhost:8080/search';
+      fetch(url)
+          .then(resp => resp.json())
+          .then(resp => (this.apiSearch = resp));
+  }
+
+  //Post-------------------------------------------------
+  postWant(data){
+      const url = 'http://localhost:8080/want';
+      alert("You have added a game to your want library");
+      const options = {
+          method: 'Post',
+          body: JSON.stringify(data),
+          headers:{
+              'Content-Type': 'application/json'
+          }
+
+      }
+      fetch(url, options)
+          .then(resp => resp.json())
+          .then(resp => (console.log(resp)));
+  }
+
+  postHad(data){
+      const url = 'http://localhost:8080/had';
+      alert("You have added a game to your had library");
+      const options = {
+          method: 'Post',
+          body: JSON.stringify(data),
+          headers:{
+              'Content-Type': 'application/json'
+          }
+      }
+      fetch(url, options)
+          .then(resp => resp.json())
+          .then(resp => (console.log(resp)));        
+  }
+
+  postHave(data){
+      const url = 'http://localhost:8080/have';
+      alert("You have added a game to your have library");
+      const options = {
+          method: 'Post',
+          body: JSON.stringify(data),
+          headers:{
+              'Content-Type': 'application/json'
+          }
+      }
+      fetch(url, options)
+          .then(resp => resp.json())
+          .then(resp => (console.log(resp)));        
+  } 
+
   private unsubscribe$: Subject<void> = new Subject<void>();
 
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;

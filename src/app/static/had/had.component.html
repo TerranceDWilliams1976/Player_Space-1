@@ -14,6 +14,16 @@
 <!-- <anms-want></anms-want> -->
 </div>
 
+<div class="test">
+  <!-- <h1> Search </h1> -->
+  <button class="btn-search" type="button" (click)="this.getHad()">Show Games</button>
+  
+  <ul *ngFor = "let data of apiHad">
+      <li>{{data.game}} </li>
+      <button class="del" type="button" (click)="this.deleteHad(data.game_Id)">Delete!</button>
+  </ul>
+</div>
+
 <div class="right">
   <!-- <button class="home"><h2>Home</h2></button><br>
   <button class="profile"><h2>Profile</h2></button><br> -->
