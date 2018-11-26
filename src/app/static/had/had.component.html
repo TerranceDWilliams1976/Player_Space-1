@@ -1,0 +1,33 @@
+
+  
+<div class="left">
+  <img src="https://cdn1.iconfinder.com/data/icons/mix-color-4/502/Untitled-1-512.png" alt="" height="150px" width="150px" class="image"><br>
+  <button class="settings"><h2>Settings</h2></button><br>
+  <button class="account"><h2>My Account</h2></button><br>
+  <button class="garage"><h2>Garage</h2></button>
+</div>
+
+<div class="center">
+  <a routerLink="../want"><button class="want"><h2>I Want</h2></button></a>
+  <button routerLink="../have" class="have"><h2>I Have</h2></button>
+  <button routerLink="../had" class="had"><h2>I Had</h2></button>
+<!-- <anms-want></anms-want> -->
+</div>
+
+<div class="test">
+  <!-- <h1> Search </h1> -->
+  <button class="btn-search" type="button" (click)="this.getHad()">Show Games</button>
+  
+  <ul *ngFor = "let data of apiHad">
+      <li>{{data.game}} </li>
+      <button class="del" type="button" (click)="this.deleteHad(data.game_Id)">Delete!</button>
+  </ul>
+</div>
+
+<div class="right">
+  <!-- <button class="home"><h2>Home</h2></button><br>
+  <button class="profile"><h2>Profile</h2></button><br> -->
+  <a href="/#/examples/todos"><button class="search"><h2><a>Search For A Game</a></h2></button></a>
+  <!-- <a href="/#/"><button class="search"><h2><a>Search For A Game</a></h2></button></a> -->
+  
+</div>
