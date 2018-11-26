@@ -31,11 +31,6 @@
     "accessibility": "npm-run-all --parallel --race server accessibility:run",
     "accessibility:run": "pa11y-ci --threshold 250"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm run test"
-    }
-  },
   "lint-staged": {
     "{src,e2e,cypress}/**/*.{ts,json,md,scss}": [
       "prettier --write",
@@ -89,7 +84,6 @@
     "codelyzer": "~4.5.0",
     "cypress": "^3.1.0",
     "express": "^4.16.4",
-    "husky": "^1.2.0",
     "jasmine-core": "~3.2.1",
     "jasmine-marbles": "^0.4.0",
     "jasmine-spec-reporter": "~4.2.1",

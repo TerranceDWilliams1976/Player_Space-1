@@ -1,10 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { select, Store } from '@ngrx/store';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { select, Store } from "@ngrx/store";
+import { Subject } from "rxjs";
+import { takeUntil } from "rxjs/operators";
 
-import { ROUTE_ANIMATIONS_ELEMENTS } from '@app/core';
+import { ROUTE_ANIMATIONS_ELEMENTS } from "@app/core";
 
 import {
   ActionTodosAdd,
@@ -12,16 +12,16 @@ import {
   ActionTodosPersist,
   ActionTodosRemoveDone,
   ActionTodosToggle
-} from '../todos.actions';
-import { selectTodos } from '../todos.selectors';
-import { Todo, TodosFilter, TodosState } from '../todos.model';
-import { State } from '../../examples.state';
-import { TranslateService } from '@ngx-translate/core';
+} from "../todos.actions";
+import { selectTodos } from "../todos.selectors";
+import { Todo, TodosFilter, TodosState } from "../todos.model";
+import { State } from "../../examples.state";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
-  selector: 'anms-todos',
-  templateUrl: './todos-container.component.html',
-  styleUrls: ['./todos-container.component.scss']
+  selector: "anms-todos",
+  templateUrl: "./todos-container.component.html",
+  styleUrls: ["./todos-container.component.scss"]
 })
 export class TodosContainerComponent implements OnInit, OnDestroy {
   apiHave;
@@ -31,64 +31,63 @@ export class TodosContainerComponent implements OnInit, OnDestroy {
 
   //Get-------------------------------------------------
   getSearch() {
-      const url = 'http://localhost:8080/search';
-      fetch(url)
-          .then(resp => resp.json())
-          .then(resp => (this.apiSearch = resp));
+    const url = "http://localhost:8080/search";
+    fetch(url)
+      .then(resp => resp.json())
+      .then(resp => (this.apiSearch = resp));
   }
 
   //Post-------------------------------------------------
-  postWant(data){
-      const url = 'http://localhost:8080/want';
-      alert("You have added a game to your want library");
-      const options = {
-          method: 'Post',
-          body: JSON.stringify(data),
-          headers:{
-              'Content-Type': 'application/json'
-          }
-
+  postWant(data) {
+    const url = "http://localhost:8080/want";
+    alert("You have added a game to your want library");
+    const options = {
+      method: "Post",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
       }
-      fetch(url, options)
-          .then(resp => resp.json())
-          .then(resp => (console.log(resp)));
+    };
+    fetch(url, options)
+      .then(resp => resp.json())
+      .then(resp => console.log(resp));
   }
 
-  postHad(data){
-      const url = 'http://localhost:8080/had';
-      alert("You have added a game to your had library");
-      const options = {
-          method: 'Post',
-          body: JSON.stringify(data),
-          headers:{
-              'Content-Type': 'application/json'
-          }
+  postHad(data) {
+    const url = "http://localhost:8080/had";
+    alert("You have added a game to your had library");
+    const options = {
+      method: "Post",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
       }
-      fetch(url, options)
-          .then(resp => resp.json())
-          .then(resp => (console.log(resp)));        
+    };
+    fetch(url, options)
+      .then(resp => resp.json())
+      .then(resp => console.log(resp));
   }
 
-  postHave(data){
-      const url = 'http://localhost:8080/have';
-      alert("You have added a game to your have library");
-      const options = {
-          method: 'Post',
-          body: JSON.stringify(data),
-          headers:{
-              'Content-Type': 'application/json'
-          }
+  postHave(data) {
+    const url = "http://localhost:8080/have";
+    alert("You have added a game to your have library");
+    const options = {
+      method: "Post",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
       }
-      fetch(url, options)
-          .then(resp => resp.json())
-          .then(resp => (console.log(resp)));        
-  } 
+    };
+    fetch(url, options)
+      .then(resp => resp.json())
+      .then(resp => console.log(resp));
+  }
 
   private unsubscribe$: Subject<void> = new Subject<void>();
 
   routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
   todos: TodosState;
-  newTodo = '';
+  newTodo = "";
 
   constructor(
     public store: Store<State>,
@@ -115,10 +114,10 @@ export class TodosContainerComponent implements OnInit, OnDestroy {
 
   get filteredTodos() {
     const filter = this.todos.filter;
-    if (filter === 'ALL') {
+    if (filter === "ALL") {
       return this.todos.items;
     } else {
-      const predicate = filter === 'DONE' ? t => t.done : t => !t.done;
+      const predicate = filter === "DONE" ? t => t.done : t => !t.done;
       return this.todos.items.filter(predicate);
     }
   }
@@ -136,27 +135,27 @@ export class TodosContainerComponent implements OnInit, OnDestroy {
   }
 
   onNewTodoClear() {
-    this.newTodo = '';
+    this.newTodo = "";
   }
 
   onAddTodo() {
     this.store.dispatch(new ActionTodosAdd({ name: this.newTodo }));
     const addedMessage = this.translateService.instant(
-      'anms.examples.todos.added.notification',
+      "anms.examples.todos.added.notification",
       { name: this.newTodo }
     );
     this.showNotification(addedMessage);
-    this.newTodo = '';
+    this.newTodo = "";
   }
 
   onToggleTodo(todo: Todo) {
     this.store.dispatch(new ActionTodosToggle({ id: todo.id }));
     const newStatus = this.translateService.instant(
-      `anms.examples.todos.filter.${todo.done ? 'active' : 'done'}`
+      `anms.examples.todos.filter.${todo.done ? "active" : "done"}`
     );
-    const undo = this.translateService.instant('anms.examples.todos.undo');
+    const undo = this.translateService.instant("anms.examples.todos.undo");
     const toggledMessage = this.translateService.instant(
-      'anms.examples.todos.toggle.notification',
+      "anms.examples.todos.toggle.notification",
       { name: todo.name }
     );
     this.showNotification(`${toggledMessage} ${newStatus}`, undo)
@@ -167,7 +166,7 @@ export class TodosContainerComponent implements OnInit, OnDestroy {
   onRemoveDoneTodos() {
     this.store.dispatch(new ActionTodosRemoveDone());
     const removedMessage = this.translateService.instant(
-      'anms.examples.todos.remove.notification'
+      "anms.examples.todos.remove.notification"
     );
     this.showNotification(removedMessage);
   }
@@ -175,7 +174,7 @@ export class TodosContainerComponent implements OnInit, OnDestroy {
   onFilterTodos(filter: TodosFilter) {
     this.store.dispatch(new ActionTodosFilter({ filter }));
     const filterToMessage = this.translateService.instant(
-      'anms.examples.todos.filter.notification'
+      "anms.examples.todos.filter.notification"
     );
     const filterMessage = this.translateService.instant(
       `anms.examples.todos.filter.${filter.toLowerCase()}`
@@ -186,7 +185,7 @@ export class TodosContainerComponent implements OnInit, OnDestroy {
   private showNotification(message: string, action?: string) {
     return this.snackBar.open(message, action, {
       duration: 2500,
-      panelClass: 'todos-notification-overlay'
+      panelClass: "todos-notification-overlay"
     });
   }
 }

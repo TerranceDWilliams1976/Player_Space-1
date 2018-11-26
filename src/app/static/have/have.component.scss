@@ -1,4 +1,4 @@
-@import '../../../styles-variables';
+@import "../../../styles-variables";
 
 .container {
   margin-top: 20px;
@@ -63,7 +63,7 @@ mat-card {
   display: block;
   margin: 0 0 0 0;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: #ffae00;
   color: #ffffff;
 }
@@ -76,7 +76,7 @@ mat-card {
   display: block;
   margin: 0 0 0 0;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: #ffae00;
   color: #ffffff;
 }
@@ -89,7 +89,7 @@ mat-card {
   display: block;
   margin: 0 0 0 0;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   color: #ffffff;
 }
 
@@ -114,14 +114,14 @@ mat-card {
   display: block;
   border-radius: 10px;
   margin: 20px 20px;
-  background-color: #ffae00; 
+  background-color: #ffae00;
   border: none;
   color: #ffffff;
   padding: 10px;
 }
 
-.search:hover{
-  background-color: #000000; 
+.search:hover {
+  background-color: #000000;
 }
 
 .image {
@@ -136,12 +136,12 @@ mat-card {
   display: inline-block;
   margin: 0 0 0 0;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: #ffae00;
   color: #ffffff;
 }
 
-.want:hover{
+.want:hover {
   background-color: #000000;
 }
 
@@ -152,11 +152,12 @@ mat-card {
   display: inline-block;
   margin: 0 0 0 0;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: #000000;
   color: #ffffff;
 }
-.have:hover, .hav:focus{
+.have:hover,
+.hav:focus {
   background-color: #000000;
 }
 .had {
@@ -166,11 +167,12 @@ mat-card {
   display: inline-block;
   margin: 0 0 0 0;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: #ffae00;
   color: #ffffff;
 }
-.had:hover, .had:focus{
+.had:hover,
+.had:focus {
   background-color: #000000;
 }
 
@@ -193,14 +195,14 @@ mat-card {
   margin: 160px 0px 0px 290px;
 }
 
-.btn-search{
+.btn-search {
   border: none;
   border-radius: 10px;
   background-color: #ffae00;
   color: #ffffff;
 }
 
-.del{
+.del {
   background-color: #8f0606;
   border: none;
   border-radius: 10px;
@@ -209,15 +211,17 @@ mat-card {
   color: #ffffff;
 }
 
-.del:hover{
+.del:hover {
   background-color: #000000;
 }
 
-.btn-search:hover{
+.btn-search:hover {
   background-color: #000000;
 }
 
-.want, .have, .had {
+.want,
+.have,
+.had {
   margin: 10px;
   margin: 10px;
 }
