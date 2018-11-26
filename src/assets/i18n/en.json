@@ -4,8 +4,13 @@
   "anms.header.github": "Project Github Repository",
   "anms.footer.changelog": "Show changelog",
   "anms.menu.about": "Home Page",
+<<<<<<< HEAD
   "anms.menu.features": "Sign In",
   "anms.menu.feature": "",
+=======
+  "anms.menu.features": "Sign Ins",
+  "anms.menu.feature": "Search For A Game",
+>>>>>>> e936adf2671742fa6882fe2baee9ecbdaae7aba0
   "anms.menu.examples": "Contact",
   "anms.menu.settings": "Settings",
   "anms.menu.login": "Sign in",
