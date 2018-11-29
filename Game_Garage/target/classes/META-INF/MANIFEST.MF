@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Judell
+Build-Jdk: 10.0.1
+Implementation-Title: Game_Garage
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.garage
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Game_Garage
+Created-By: Maven Integration for Eclipse
+
